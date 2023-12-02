@@ -1,0 +1,75 @@
+{
+  "name": "password-manager",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@sweetalert/with-react": "^0.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.0.1",
+    "styled-components": "4.3.2",
+    "sweetalert": "^2.1.2",
+    "typescript": "3.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcoonroad/password-manager.git"
+  },
+  "homepage": ".",
+  "author": "Marco Aurélio da Silva <marcoonroad@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "predeploy": "yarn run build && mv build/index.html build/200.html",
+    "deploy": "surge --project ./build --domain https://password-manager.surge.sh",
+    "predeploy:prod": "yarn run build",
+    "deploy:prod": "gh-pages -b gh-pages -d ./build",
+    "android:off": "adb reverse --remove-all",
+    "android:on": "yarn run android:off && adb reverse tcp:4000 tcp:3000",
+    "predebug": "yarn run android:on && echo 'Device is listening at http://localhost:4000 address...'",
+    "android:open": "adb shell am start -a android.intent.action.VIEW -d",
+    "android:open:local": "yarn run android:open http://localhost:4000",
+    "android:open:site": "yarn run android:open https://password-manager.surge.sh",
+    "debug": "yarn run start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "hooks:pre-commit": "pretty-quick --staged",
+    "hooks:pre-push": "echo 'Do nothing by now...'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run hooks:pre-commit",
+      "pre-push": "yarn run hooks:pre-push"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.8",
+    "@types/react": "16.8.21",
+    "@types/react-dom": "16.8.4",
+    "@types/react-router-dom": "5.1.2",
+    "@types/styled-components": "4.1.16",
+    "gh-pages": "2.1.1",
+    "husky": "3.0.4",
+    "prettier": "1.19.1",
+    "pretty-quick": "2.0.1",
+    "surge": "0.21.3"
+  }
+}

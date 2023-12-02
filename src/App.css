@@ -1,0 +1,366 @@
+/*
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.monospace {
+  font-family: 'Inconsolata', monospace;
+}
+*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* background-color: #444455; */
+  /* background-color: #f1f1f1; */
+  background-color: #d0d0d0;
+}
+
+hr.content-line-separator {
+  border: 0.5px solid black;
+}
+
+.form-component {
+  display: block;
+  margin: 0 auto;
+  padding: 0px 0px;
+}
+
+.form-container {
+  flex-grow: 1;
+}
+
+input {
+  font-family: 'Inconsolata', monospace;
+}
+
+button.form-component {
+  width: 100% !important;
+}
+
+.horizontal-stack {
+  width: 100% !important;
+  display: flex !important;
+}
+
+.horizontal-flex-stack {
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+button {
+  font-family: 'Inconsolata', monospace;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+button:hover {
+  /* background-color: #4caf50; */
+  /* font-weight: normal; */
+}
+
+button:hover:disabled {
+  /* background-color: #4caf50; */
+  /* font-weight: normal; */
+}
+
+button:disabled {
+  background-color: gray !important;
+  /*
+  -webkit-filter: grayscale(0.2) opacity(0.8) !important;
+  filter: grayscale(0.2) opacity(0.8) !important;
+  */
+}
+
+span.footer-text {
+  display: inline-block;
+  width: 100%;
+  color: white;
+  padding-right: 2em;
+  text-align: right;
+  font-family: 'Inconsolata', monospace;
+  /*
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  margin-right: 0;
+  */
+}
+
+.tab-selector {
+  text-decoration: none;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  display: block;
+  width: auto;
+  padding: 1em 1em;
+  background-color: #444455;
+}
+
+.tab-wrapper {
+  display: flex;
+}
+
+.tab-selector-active {
+  text-decoration: none;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  display: block;
+  width: auto;
+  padding: 1em 1em;
+  background-color: #282c34;
+  pointer-events: none;
+}
+
+.tab-wrapper {
+  border-top-style: solid !important;
+  border-top-width: 2px !important;
+  border-top-color: #4caf50 !important;
+}
+
+.about-container {
+  color: black;
+  font-family: 'Inconsolata', monospace;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 25px !important;
+}
+
+.about-container p {
+  padding: 0.75em 0.75em;
+  display: block;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.about-invisible-text-hack {
+  color: transparent;
+}
+
+.about-blink-animation-wait {
+  /* color: rgba(255, 255, 255, 255); */
+  color: black;
+}
+
+.about-blink-animation-start {
+  /* color: rgba(255, 255, 255, 255); */
+  color: black;
+  -webkit-animation-name: about-blink-animation-frames; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
+  animation-name: about-blink-animation-frames;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes about-blink-animation-frames {
+  0% {
+    /* color: rgba(255, 255, 255, 255); */
+    color: black;
+  }
+  20% {
+    /* color: rgba(255, 255, 255, 255); */
+    color: black;
+  }
+  40% {
+    /* color: rgba(255, 255, 255, 255); */
+    color: black;
+  }
+  60% {
+    /* color: rgba(255, 255, 255, 0); */
+    color: transparent;
+  }
+  80% {
+    /* color: rgba(255, 255, 255, 0); */
+    color: transparent;
+  }
+  100% {
+    /* color: rgba(255, 255, 255, 0); */
+    color: transparent;
+  }
+}
+
+/* Standard syntax */
+@keyframes about-blink-animation-frames {
+  0% {
+    /* color: rgba(255, 255, 255, 255); */
+    color: black;
+  }
+  20% {
+    /* color: rgba(255, 255, 255, 255); */
+    color: black;
+  }
+  40% {
+    /* color: rgba(255, 255, 255, 255); */
+    color: black;
+  }
+  60% {
+    /* color: rgba(255, 255, 255, 0); */
+    color: transparent;
+  }
+  80% {
+    /* color: rgba(255, 255, 255, 0); */
+    color: transparent;
+  }
+  100% {
+    /* color: rgba(255, 255, 255, 0); */
+    color: transparent;
+  }
+}
+
+.text-link {
+  color: black;
+  font-size: 0.85em;
+}
+
+.invisible {
+  display: none !important;
+}
+
+/*
+body * {
+  font-family: 'Inconsolata', monospace !important;
+  font-variant: small-caps !important;
+}
+
+body > * {
+  font-family: 'Inconsolata', monospace !important;
+  font-variant: small-caps !important;
+}
+*/
+
+.manager-container p {
+  text-align: left !important;
+}
+
+.manager-action-label {
+  display: flex;
+  /* width: 50%; */
+  text-align: left;
+  flex: 2;
+  width: auto;
+}
+
+.manager-help-icon {
+  margin-left: 3px;
+}
+
+.manager-text-status {
+  /*
+  color: #4caf50;
+  font-weight: bold;
+  font-variant: small-caps;
+  */
+  flex: 1;
+  display: flex;
+  text-align: right;
+  width: auto;
+  /* width: 50%; */
+}
+
+.eye-icon {
+  width: 24px;
+  height: 14px;
+}
+
+.stop-component {
+  margin-top: 15px;
+}
+
+.stop-icon {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+
+.stop-text {
+  color: black;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  font-size: 3em;
+  text-align: center;
+}
+
+.stop-subtitle {
+  padding-top: 25px;
+  color: black;
+  margin: 0 auto;
+  width: 80%;
+  display: block;
+  font-size: 1.1em;
+  text-align: justify;
+  padding-bottom: 50px;
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+
+.no-bottom-padding-hack {
+  padding-bottom: 0 !important;
+}
+
+.checkbox-container i.material-icons {
+  font-size: 1.1em;
+  vertical-align: middle;
+  padding: auto;
+}
+
+.checkbox-container span {
+  font-size: 1.1em;
+  vertical-align: middle;
+  padding: auto;
+}
+
+h2.password-options-title {
+  font-size: 1.25em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.password-output input {
+  border-color: #4caf50;
+  border-style: solid;
+  border-width: 2px;
+}
